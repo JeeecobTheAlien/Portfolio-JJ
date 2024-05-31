@@ -1,0 +1,470 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header Styles */
+.main-header {
+    background-color: white;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; 
+    
+}
+
+.logo-container img {
+    height: 80px;
+}
+
+
+
+nav ul {
+    list-style: none;
+    margin-right: 20px;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 32px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: rgb(107, 105, 105); 
+}
+
+/* Home Section Style */ 
+#role-container {
+    padding-top: 5px;
+    height: 40px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+#role {
+    margin: 0;
+}
+
+.home {
+        padding-top: 100px; 
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 0;
+        height: auto;
+    }
+
+.half-box {
+    background-color: #365893;
+    height: 80.6vh;
+    width: 55%;
+    justify-self: left;
+    display: flex;
+    flex-direction: column; 
+}
+
+.photo-box {
+    background-color: white;
+    height: 80.6vh;
+    width: 45%;
+    justify-self: right;
+}
+
+
+.photo-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.half-box h6 {
+    margin: 0;
+    padding-top: 140px;
+    padding-left: 64px;
+    color: rgb(255, 255, 255);
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2;
+}
+
+.half-box h4 {
+    margin: 0;
+    padding-left: 64px;
+    color: #ffffff;
+    font-family: 'Playfair Display', serif;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1; 
+}
+
+.half-box h5 {
+    margin: 0; 
+    padding-left: 64px;
+    color: #ffffff;
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.buttons-container {
+    padding-left: 64px;
+    margin-top: 10px; 
+}
+
+.portfolio-button,
+.contact-button {
+    border-radius:  20px;
+    width: 178px;
+    height: 48px;
+    margin-right: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff7f50;
+    color: #ffffff;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.5s ease, box-shadow 0.5s ease; 
+}
+
+.portfolio-button:hover,
+.contact-button:hover {
+    background-color: lightgray;
+    color: rgb(255, 127, 80);
+    box-shadow: 0 0 1rem rgb(128, 0, 32);
+}
+.social-media {
+    padding-left: 64px;
+    padding-bottom: 15px;
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.social-media a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    background: rgb(255, 127, 80); 
+    border-radius: 50%;
+    overflow: hidden; 
+    transition: .5s ease;
+}
+
+.social-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.social-media a:hover {
+    background: var(--second-bg-color); 
+    box-shadow: 0 0 1rem rgb(128, 0, 32); 
+}
+
+/* About Me Section Styles */
+#about {
+    padding-top: 100px; 
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 0;
+    height: auto;
+    background-color: rgb(251, 166, 135);
+    padding-bottom: 50px;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-content {
+    text-align: center;
+}
+
+.about-content h2 {
+    font-size: 2.5rem;
+    color: #f7f3f3;
+}
+
+.about-content p {
+    font-size: 1.6rem;
+    color: #fffbfb;
+    margin-bottom: 30px;
+}
+
+.skills-container {
+    display: flex;
+    gap: 2px; 
+    flex-wrap: wrap;
+    margin-top: 30px; 
+}
+
+.flip-card {
+    width: 280px; 
+    height: 300px; 
+    perspective: 1000px;
+    margin: 5px; 
+}
+
+.flip-card-inner {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    justify-content: center;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.flip-card-front {
+    background-color: rgb(54, 88, 147);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.flip-card-back {
+    background-color: #686565;
+    transform: rotateY(180deg);
+}
+
+.flip-card i {
+    font-size: 5rem;  
+    color: rgb(251, 166, 135); 
+}
+
+.flip-card h3 {
+    font-size: 1.8rem;
+    color: #f6f2f2;
+    margin-top: 10px;
+}
+
+.flip-card p {
+    font-size: 1.4rem;
+    color: #dfd9d9;
+}
+
+.flip-card .details {
+    margin-top: 10px;
+    font-size: 1.4rem;
+    color: #f3e9e9;
+}
+
+.download-resume {
+    margin-top: 20px; 
+}
+
+.download-resume a {
+    border-radius:  20px;
+    width: 178px;
+    height: 48px;
+    margin-right: 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    background-color: rgb(54, 88, 147);
+    color: #fffdfd;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.5s ease, box-shadow 0.5s ease; 
+}
+
+.download-resume a:hover {
+    background-color: rgb(85, 108, 147);
+    color: rgb(216, 206, 206);
+    box-shadow: 0 0 1rem rgb(128, 0, 32);
+}
+
+/* Portfolio Section Styles */
+#portfolio {
+    padding-top: 100px; 
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 0;
+    height: auto;
+    background-color: white;
+    padding-bottom: 50px;
+}
+.portfolio-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+
+.portfolio-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.portfolio-card {
+    width: 500px; 
+    text-align: center;
+    height: 820px;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-card img {
+    max-width: 100%; 
+    height: auto; 
+    max-height: 200px; 
+    border-radius: 8px;
+}
+
+.portfolio-card h3 {
+    margin-top: 10px;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.portfolio-card p {
+    font-size: 1.4rem;
+    color: #555;
+}
+
+.portfolio-card img {
+    max-width: 100%; 
+    height: auto; 
+    max-height: 350px; 
+    border-radius: 8px;
+}
+
+.card-bottom {
+    margin-top: auto; 
+}
+
+.more-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: rgb(54, 88, 147);
+    color: #fefafa;
+    text-decoration: none;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+.more-button:hover {
+    background-color: rgb(85, 108, 147);
+    color: rgb(216, 206, 206);
+    box-shadow: 0 0 1rem rgb(128, 0, 32);
+}
+
+.carousel-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.carousel {
+    width: 100%;
+}
+
+.slick-prev, .slick-next {
+    font-size: 24px;
+    color: #ECDB3F;
+}
+
+.slick-prev:hover, .slick-next:hover {
+    color: lightgray;
+}
+
+.slick-center {
+    transform: scale(1.2); 
+    transition: transform 0.5s ease;
+}
+
+
+
+/* Book Section */
+#book {
+    padding-top: 100px; 
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 0;
+    height: auto;
+    background-color: rgb(54, 88, 147);
+    padding-bottom: 50px;
+    justify-content: center;
+}
+
+.book-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.book-content h2 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 20px; /* Add margin to separate h2 from the paragraph */
+}
+
+.book-content p {
+    font-size: 1.6rem;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+/* Style the calendly container */
+.calendly-inline-widget {
+    width: 100%; 
+    height: 650px;
+}
+
+
